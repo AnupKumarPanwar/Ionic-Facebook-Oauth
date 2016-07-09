@@ -1,0 +1,31 @@
+<ion-view title="Profile" ng-init="init()">
+    <ion-content style="background-color:gray">
+        <div class="list card">
+                <center><img ng-src="https://graph.facebook.com/{{profileData.id}}/picture?type=large" style="border-radius:50%"></center>
+            <div class="item item-avatar">
+             <img ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/At_Sign_Nimbus.svg/500px-At_Sign_Nimbus.svg.png" style="border-radius:50%">
+                <h2>{{profileData.name}}</h2>
+                <p>{{profileData.email}}</p>
+            </div>
+            <a href="" class="item item-icon-left">
+                <i class="icon ion-person-stalker"></i>
+                {{profileData.gender}}
+            </a>
+            <a href="" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                {{profileData.location.name}}
+            </a>
+            <a href="" class="item item-icon-left">
+                <i class="icon ion-heart"></i>
+                {{profileData.relationship_status}}
+            </a>
+            <a href="" class="item item-icon-left">
+                <i class="icon ion-person-add"></i>
+               Number of Friends : {{profileData.friends.data.length}}
+            </a>
+            
+            
+           
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view title="Enemy" ng-init="init()">
+    <ion-content style="background-color:gray">
+        <div class="list card">
+       
+            <div class="item item-avatar" ng-repeat="feel in filtered = (feelings.data.data | filter: {yourfeel : 'Enemy'})">
+              <img ng-src="{{feel.picture}}" style="border-radius:50%">
+                <h2>{{feel.name}}</h2>
+                <p>{{feel.myfeel}}</p>
+            </div>
+            <a href="" class="item item-icon-left">
+                <i class="icon ion-person-stalker"></i>
+                <ion-spinner icon="lines"></ion-spinner>
+                {{filtered.length}} people hate you
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>
